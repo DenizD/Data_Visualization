@@ -4,7 +4,7 @@ from barchart_visualization.barchart_visualize import BarChartVis
 import pandas as pd
 import requests
 
-visMode = "heatmap"
+visMode = "wordcloud"
 
 ## Wordcloud visualization
 if(visMode == "wordcloud"):
@@ -16,7 +16,7 @@ if(visMode == "wordcloud"):
 ## Heatmap visualization
 elif(visMode == "heatmap"):
     data = pd.read_csv("./heatmap_visualization/autos.csv")
-    columns = ["bore", "stroke", "compression-ratio", "horsepower", "city-mpg", "price"]
+    columns = ["bore", "stroke", "horsepower", "city-mpg", "price"]
 
     corrMatrix = data[columns].corr()
 
@@ -36,7 +36,7 @@ elif(visMode == "barchart"):
 
     values = totalDeaths[0:10]
     labels = countries[0:10]
-    colors = ["dodgerblue", "gold", "cornflowerblue", "royalblue", "crimson", "green", "red", "darkorange", "silver", "olive"]
+    # colors = ["dodgerblue", "gold", "cornflowerblue", "royalblue", "crimson", "green", "red", "darkorange", "silver", "olive"]
 
-    bc = BarChartVis(values=values, labels=labels, colors=colors, textTitle="Top 10 Countries in Coronavirus Deaths", valuesTitle="Deaths")
+    bc = BarChartVis(values=values, labels=labels, colors=None, textTitle="Top 10 Countries in Coronavirus Deaths", valuesTitle="Deaths")
     bc.show()
