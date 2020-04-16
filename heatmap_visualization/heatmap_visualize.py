@@ -16,8 +16,9 @@ def value_to_color(val):
 
 class HeatMapVis():
 
-    def __init__(self, data):
+    def __init__(self, data, figSize=(10, 10)):
         self.data = data
+        self.figSize = figSize
 
     def show(self):
         dataColNames = self.data.columns
@@ -25,12 +26,10 @@ class HeatMapVis():
         nRows = self.data.shape[0]
         nCols = self.data.shape[1]
 
-        fig = plt.figure(figsize=(10, 10))
+        fig = plt.figure(figsize=self.figSize)
         gs = gridspec.GridSpec(1, 15, hspace=0.2, wspace=0.1)
         ax = plt.subplot(gs[:,:-1])
         ax_legend = plt.subplot(gs[:,-1])
-
-        # fig.tight_layout()
 
         # scatter plot for showing correlation heatmaps (the bigger rectangle size, the more correlated data values are)
         scale = 1000
