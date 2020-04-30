@@ -44,7 +44,21 @@ In this type of visualization,  words are shown in the figure by varying sizes d
 
 Following figure with dog mask [4] demonstrates an example wordcloud visualization of a text taken from the Wiki page about this dog [4].  
 
-<img src="/home/deniz/workspace/python/github_codes/data_visualization/wordcloud_visualization/wordcloud_out.png" style="zoom:67%;" />
+<img src="./wordcloud_visualization/wordcloud_out.png" style="zoom:67%;" />
+
+
+
+# Scatter Plot Visualization
+
+Scatter plots are used for visualize two variables on cartesian coordinate system. 
+
+This visualization technique can be useful to figure out the correlations between two variables.  
+
+In this example, I demonstrate the scatter plot of ppg (points per game) and age variables for the top 20 NBA player in ppg in 2019-2020 season [5]. 
+
+Scatter points are represented by player images.
+
+![](./scatter_visualization/scatter_out.png)
 
 
 
@@ -57,3 +71,5 @@ Following figure with dog mask [4] demonstrates an example wordcloud visualizati
 [3] https://archive.ics.uci.edu/ml/datasets/Automobile
 
 [4] http://pngimg.com/download/50348
+
+[5] https://www.nbastuffer.com/2019-2020-nba-player-stats/

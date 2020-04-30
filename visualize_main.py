@@ -1,10 +1,12 @@
 from wordcloud_visualization.wordcloud_visualize import WordCloudVis
 from heatmap_visualization.heatmap_visualize import HeatMapVis
 from barchart_visualization.barchart_visualize import BarChartVis
+from scatter_visualization.scatter_visualize import ScatterPlotVis
 import pandas as pd
 import requests
+import numpy as np
 
-visMode = "wordcloud"
+visMode = "scatter"
 
 ## Wordcloud visualization
 if(visMode == "wordcloud"):
@@ -40,3 +42,23 @@ elif(visMode == "barchart"):
 
     bc = BarChartVis(values=values, labels=labels, colors=None, textTitle="Top 10 Countries in Coronavirus Deaths", valuesTitle="Deaths")
     bc.show()
+
+## Scatter plot visualization of ppg and age for the top 20 NBA player in ppg in 2019-2020 season
+elif(visMode == "scatter"):
+    data = pd.read_excel("scatter_visualization/2019-2020_NBA_Player_Stats_NBAstuffer.xlsx", sheet_name="Sheet1", header=1)
+    data = data.sort_values("PPGPointsPoints per game.", ascending=False)
+    data = data.head(20)
+    names = data["FULL NAME"]
+    ppgs = data["PPGPointsPoints per game."]
+    ages = data["AGE"]
+
+    names = names.tolist()
+    names = list(map(lambda name: name.replace(" ", "_").lower(), names))
+    dataX = ages.tolist()
+    dataY = ppgs.tolist()
+    xLabel = "Age"
+    yLabel = "PPG"
+
+
+    sp = ScatterPlotVis(names, dataX, dataY, xLabel, yLabel)
+    sp.show()
