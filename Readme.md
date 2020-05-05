@@ -62,6 +62,20 @@ Scatter points are represented by player images.
 
 
 
+# Pie Chart Visualization
+
+Pie chart is another technique to visualize data in a circular fashion. Slices in this circle represent the data labels and and area of each slice is proportional to the percentage distribution of its label among whole data. 
+
+Following figure demonstrates the top 10 popular programming languages as of May 2020 [6].
+
+
+
+<img src="./piechart_visualization/piechart_out.png"  />
+
+
+
+
+
 # References
 
 [1] https://pomber.github.io/covid19/timeseries.json
@@ -73,3 +87,5 @@ Scatter points are represented by player images.
 [4] http://pngimg.com/download/50348
 
 [5] https://www.nbastuffer.com/2019-2020-nba-player-stats/
+
+[6] http://pypl.github.io/PYPL.html
