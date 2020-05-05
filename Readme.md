@@ -52,7 +52,7 @@ Following figure with dog mask [4] demonstrates an example wordcloud visualizati
 
 Scatter plots are used for visualize two variables on cartesian coordinate system. 
 
-This visualization technique can be useful to figure out the correlations between two variables.  
+This visualization technique can be useful to figure out the correlations between two variables. It is also helpful to detect outliers in the dataset.  
 
 In this example, I demonstrate the scatter plot of ppg (points per game) and age variables for the top 20 NBA player in ppg in 2019-2020 season [5]. 
 

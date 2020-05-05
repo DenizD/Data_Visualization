@@ -2,11 +2,11 @@ from wordcloud_visualization.wordcloud_visualize import WordCloudVis
 from heatmap_visualization.heatmap_visualize import HeatMapVis
 from barchart_visualization.barchart_visualize import BarChartVis
 from scatter_visualization.scatter_visualize import ScatterPlotVis
+from piechart_visualization.piechart_visualize import PieChartVis
 import pandas as pd
 import requests
-import numpy as np
 
-visMode = "scatter"
+visMode = "piechart"
 
 ## Wordcloud visualization
 if(visMode == "wordcloud"):
@@ -62,3 +62,12 @@ elif(visMode == "scatter"):
 
     sp = ScatterPlotVis(names, dataX, dataY, xLabel, yLabel)
     sp.show()
+
+## Pie chart visualization for top 10 popular programming languages (Ref: http://pypl.github.io/PYPL.html)
+elif(visMode == "piechart"):
+    labels = ["Python", "Java", "Javascript", "C#", "PHP", "C/C++", "R", "Objective-C", "Swift", "Other"]
+    percentages = [31.17, 17.75, 7.99, 7.05, 6.09, 5.67, 3.93, 2.4, 2.26, 15.69]
+    explode = (0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+    pc = PieChartVis(labels, percentages, explode)
+    pc.show()
