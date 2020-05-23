@@ -2,7 +2,7 @@
 
 In this repository, I have compiled a python implementation of different types of data visualizations which will be very useful in the field of data science.
 
-Here are the list of visualization techniques I have implemented so far:
+Here are the list of some visualization techniques:
 
 - *Barchart visualization*
 - *Heatmap visualization*
@@ -14,7 +14,7 @@ Here are the list of visualization techniques I have implemented so far:
 
 **Required Packages:**
 
-numpy, matplotlib, seaborn, PIL, wordcloud
+`numpy, matplotlib, seaborn, PIL, wordcloud`
 
 All of these packages can be installed via *pip* package manager.
 
@@ -24,7 +24,7 @@ All of these packages can be installed via *pip* package manager.
 
 Bar chart can be very useful if you want to demonstrate a categorical data with its values. You can visualize this categorical data with both vertical or horizontal rectangular bars. 
 
-Here, I visualized ***Top 10 Countries in Coronavirus Deaths*** in a bar chart graph. I have get the real-time Covid-19 stats using this [link](https://pomber.github.io/covid19/timeseries.json) [1]. 
+Here, I visualized ***Top 10 Countries in Coronavirus Deaths*** as of May 23 in a bar chart graph. I have get the real-time Covid-19 stats using this [link](https://pomber.github.io/covid19/timeseries.json) [1]. 
 
 <img src="./barchart_visualization/barchart_out.png" style="zoom:;" />
 
