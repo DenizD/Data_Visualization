@@ -6,7 +6,7 @@ from piechart_visualization.piechart_visualize import PieChartVis
 import pandas as pd
 import requests
 
-visMode = "piechart"
+visMode = "barchart"
 
 ## Wordcloud visualization
 if(visMode == "wordcloud"):

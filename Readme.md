@@ -7,8 +7,10 @@ Here are the list of visualization techniques I have implemented so far:
 - *Barchart visualization*
 - *Heatmap visualization*
 - *Wordcloud visualization*
+- *Scatter Plot visualization*
+- *Pie Chart visualization*
 
-These list will be updated.
+
 
 **Required Packages:**
 
